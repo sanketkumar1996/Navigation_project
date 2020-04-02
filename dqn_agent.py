@@ -30,8 +30,8 @@ class Agent:
 
         self.local_nn = Model(state_size, action_size).to(device)
         # self.target_nn = Model(state_size, action_size).to(device)
-        self.qnetwork_local.load_state_dict(torch.load('/Users/sanketsans/Documents/Udacity/deepRL/deep-reinforcement-learning/p1_navigation/checkpoint0.pth', map_location=torch.device('cpu')))
-        self.qnetwork_local.eval()
+        self.local_nn.load_state_dict(torch.load('/Users/sanketsans/Documents/Udacity/deepRL/deep-reinforcement-learning/p1_navigation/checkpoint0.pth', map_location=torch.device('cpu')))
+        self.local_nn.eval()
 
         self.optimizer = optim.Adam(self.local_nn.parameters(), lr=LR)
 
