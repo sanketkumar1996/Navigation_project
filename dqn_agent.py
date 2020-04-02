@@ -102,7 +102,7 @@ class Agent:
 class ReplayMemory:
 
     def __init__(self, buffer_size, action_size):
-        """Initialize a ReplayBuffer object.
+        """Initialize a ReplayBuffer object."""
 
         self.action_size = action_size
         self.memory = deque(maxlen=buffer_size)
