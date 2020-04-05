@@ -2,11 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-class QNetwork(nn.Module):
+class Model(nn.Module):
     """Actor (Policy) Model."""
 
     def __init__(self, state_size, action_size):
-        super(QNetwork, self).__init__()
+        super(Model, self).__init__()
         self.seed = torch.manual_seed(42)
         "*** YOUR CODE HERE ***"
 
